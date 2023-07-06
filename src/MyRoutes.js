@@ -3,7 +3,9 @@ import { useRoutes } from "react-router-dom";
 import DashboardTasks from './DashboardTasks';
 import AboutPage from './AboutPage';
 import DashboardMessages from './DashboardMessages';
-import Dashboard from './Dashboard';
+
+
+const Dashboard = React.lazy(() => import('./Dashboard'));
 
 export default function MyRoutes() {
     
