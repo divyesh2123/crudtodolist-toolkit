@@ -5,14 +5,14 @@ import AboutPage from './AboutPage';
 import DashboardMessages from './DashboardMessages';
 
 
-const Dashboard = React.lazy(() => import('./Dashboard'));
+const Dashboard1 = React.lazy(() => import('./Dashboard'));
 
 export default function MyRoutes() {
     
     let element = useRoutes([
         {
           path: "/",
-          element: <Dashboard />,
+          element: <Dashboard1 />,
           children: [
             {
               path: "messages",

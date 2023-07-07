@@ -11,6 +11,9 @@ import MyRoutes from './MyRoutes';
 import Header from './Header';
 import UserList from './UserList';
 import { Suspense } from 'react';
+import BuggyCounter from './BuggyCounter';
+import ErrorBoundary from './ErrorBoundary';
+import Button from './Button';
 // import MySagaWithT from './MySagaWithT';
 
 const OtherComponent = React.lazy(() => import('./MySagaWithT'));
@@ -20,14 +23,19 @@ ReactDOM.render(
 
 <BrowserRouter>
     <Provider store={store}>
+ 
+  
+    <ErrorBoundary>
+     
+      <BuggyCounter/>
 
-    <Suspense fallback={<div>Loading...</div>}>
-
-      <OtherComponent/>
-      </Suspense>
-    <MyRoutes/>
+      <Button><b>This is my label</b></Button>
+     
+    </ErrorBoundary>
+    
 
     </Provider>
+    
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
