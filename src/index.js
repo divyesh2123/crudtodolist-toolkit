@@ -28,15 +28,17 @@ ReactDOM.render(
 
 <BrowserRouter>
   
+    <Header/>
 
-    <Routes>
+
+    {/* <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='about' element={<About />} />
-                <Route path='posts' element={<Posts />}>
-                    <Route path='new' element={<NewPost />} /> {/*A nested route!*/}
-                    <Route path=':postId' element={<Post />} /> {/*A nested route!*/}
+                <Route path='posts' element={<Posts />}> */}
+                    {/* <Route path='new' element={<NewPost />} /> 
+                    <Route path=':postId' element={<Post />} /> 
                 </Route>
-            </Routes>
+            </Routes> */}
  
   
     {/* <ErrorBoundary fallback={<div>Something went wrong</div>} >
@@ -49,7 +51,7 @@ ReactDOM.render(
      */}
 
    
-    
+     <MyRoutes/>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

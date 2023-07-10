@@ -23,9 +23,9 @@ export default function Header() {
           </li>
           <li>
           <CustComLink
-            to="/team"
+            to="/posts/new"
            
-          >About
+          >posts
             </CustComLink>
           </li>
           <li>
