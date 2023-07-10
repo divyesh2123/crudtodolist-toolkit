@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import * as Sentry from "@sentry/react";
 
+
 Sentry.init({
   dsn: "https://8c868f953f534c94be172d5c059eb847@o4505469408051200.ingest.sentry.io/4505469409558528",
   integrations: [
