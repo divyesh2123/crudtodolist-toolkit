@@ -8,7 +8,21 @@ import Dashboard from './Dashboard';
 
 export default function MyRoutes() {
     
-    let element = useRoutes([
+  
+    let element = useRoutes(localStorage.getItem("role") == "admin"? [
+        {
+          path: "/",
+          element: <Dashboard />,
+          children: [
+            {
+              path: "messages",
+              element: <DashboardMessages />,
+            },
+            { path: "tasks", element: <DashboardTasks /> },
+          ],
+        },
+        { path: "team", element: <AboutPage /> },
+       ]:  [
         {
           path: "/",
           element: <Dashboard />,
@@ -22,6 +36,10 @@ export default function MyRoutes() {
         },
         { path: "team", element: <AboutPage /> },
       ]);
+
+      
     
+
+      
       return element;
 }
